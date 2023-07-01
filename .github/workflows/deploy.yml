@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: jamesIves/github-pages-deploy-action@3.12.0
+        uses: jamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
           folder: dist
