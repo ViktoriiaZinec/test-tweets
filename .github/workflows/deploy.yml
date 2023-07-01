@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: 14
 
+      - name: Installing dependencies
+        run: npm install
+
       - name: Build
         run: npm run build
 
