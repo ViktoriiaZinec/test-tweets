@@ -6,3 +6,7 @@ export const getUsers = async () => {
   const response = axios.get("users");
   return response;
 };
+export const putFollower = async (user) => {
+  const response = axios.put(`users/${user.id}`, user);
+  return response;
+};
