@@ -10,3 +10,4 @@ export const putFollower = async (user) => {
   const response = axios.put(`users/${user.id}`, user);
   return response;
 };
+// "build": "vite build --base=/test-tweets/",
