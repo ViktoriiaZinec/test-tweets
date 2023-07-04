@@ -31,6 +31,6 @@ function Dropdown({ selectedOption, setSelectedOption }) {
 export default Dropdown;
 
 Dropdown.propTypes = {
-  selectedOption: PropTypes.any,
+  selectedOption: PropTypes.string,
   setSelectedOption: PropTypes.func,
 };

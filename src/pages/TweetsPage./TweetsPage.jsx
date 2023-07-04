@@ -6,6 +6,7 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 import { filterUser } from "../../components/FilterUser/FilterUser";
 import css from "./TweetsPage.module.css";
 import { BtnLoadMore } from "../../components/BtnLoadMore/BtnLoadMore";
+import { useLocation } from "react-router-dom";
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
@@ -14,13 +15,15 @@ const TweetsPage = () => {
   const [error, setError] = useState(false);
   const userPerRow = 3;
   const [next, setNext] = useState(userPerRow);
-  const [selectedOption, setSelectedOption] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
 
   let filteredUsers = filterUser(users, selectedOption);
-  console.log("filteredUsers :>> ", filteredUsers);
+
   const [followerCounts, setFollowerCounts] = useState(
     users.map((user) => user.followers)
   );
+
+  const location = useLocation();
   console.log("users.length :>> ", users.length);
   useEffect(() => {
     setIsLoading(true);
@@ -63,11 +66,6 @@ const TweetsPage = () => {
     setNext(next + userPerRow);
   };
 
-  // const renderLoadMoreButton = users.length % 3 === 0;
-
-  // function onLoadMore() {
-  //   setPage((prevPage) => prevPage + 1);
-  // }
   const slicedUsers = filteredUsers?.slice(0, next);
   return (
     <div className={css.container}>
@@ -79,9 +77,12 @@ const TweetsPage = () => {
         users={slicedUsers}
         followers={followerCounts}
         onFollowButtonClick={handleFollowButtonClick}
+        location={location}
       />
       {error && <p> It seems, something went wrong</p>}
-      {<BtnLoadMore onLoadMore={handleMoreTweets} />}
+      {slicedUsers.length < filteredUsers.length && (
+        <BtnLoadMore onLoadMore={handleMoreTweets} />
+      )}
       {isLoading && <Loader />}
     </div>
   );

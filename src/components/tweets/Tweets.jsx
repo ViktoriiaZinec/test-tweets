@@ -22,7 +22,10 @@ export const Tweets = ({ users, onFollowButtonClick }) => {
             </div>
             <div className={css.line}></div>
             <p className={css.tweets_count}>{user.tweets} tweets</p>
-            <p>{user.followers} followers</p>
+            <p>
+              {user.followers.toLocaleString("en-US", { style: "decimal" })}{" "}
+              followers
+            </p>
             <button
               className={css.btn_follow}
               type="button"

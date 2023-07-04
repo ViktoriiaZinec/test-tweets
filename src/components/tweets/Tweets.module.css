@@ -65,7 +65,6 @@
   margin-bottom: -2px;
 }
 .avatar {
-  background-image: url(../../img/photo_border.png);
   width: 62px;
   height: 62px;
   border-radius: 50%;
@@ -106,7 +105,7 @@
   width: 76px;
   height: 22px;
   text-align: left;
-  margin-left: -222px;
+  margin-left: -164px;
   margin-top: 20px;
 }
 .logo_svg:hover {
