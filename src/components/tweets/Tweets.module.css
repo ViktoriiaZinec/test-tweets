@@ -17,6 +17,7 @@
   height: 460px;
   border-radius: 20px;
   background: linear-gradient(142deg, #471ca9 0%, #5736a3 69.1%, #4b2a99 100%);
+
   box-shadow: -2.5776965618133545px 6.873857021331787px 20.621572494506836px 0px
     rgba(0, 0, 0, 0.23);
   color: #ebd8ff;
@@ -24,21 +25,43 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+.card_bg {
+  width: 308px;
+  height: 168px;
+  background: url(../../img/picture.png);
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.line {
+  width: 380px;
+  height: 8px;
+  background: #ebd8ff;
+  box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset,
+    0px 3.4369285106658936px 3.4369285106658936px 0px rgba(0, 0, 0, 0.06),
+    0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
+  margin-top: 18px;
+}
 .img_wrapper {
   position: absolute;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   background: 0px 4.391;
-  top: -40px;
+  top: 176px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
   height: 80px;
   background: #ebd8ff;
   box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-    inset 0px -2.19582px 4.39163px #ae7be3,
-    inset 0px 4.39163px 3.29372px #fbf8ff, 0px 0px 8px rgba(0, 0, 0, 0.3);
+    inset 0px -2.195px 4.39163px #9762cf, inset 0px 4.39163px 3.29372px #fbf8ff,
+    0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.tweets_count {
+  margin-top: 62px;
+  margin-bottom: -2px;
 }
 .avatar {
   background-image: url(../../img/photo_border.png);
@@ -47,13 +70,15 @@
   border-radius: 50%;
   border-color: #ebd8ff;
   object-fit: cover;
+  margin-top: 9px;
+  margin-left: 9px;
+  box-shadow: 0px -4px 10px 0px rgba(151, 98, 207, 0.9);
 }
 .btn_follow {
   width: 196px;
   height: 50px;
   border-radius: 10px;
   border: 1px solid transparent;
-
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -64,15 +89,22 @@
     rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 6px;
+  transition: background-color 0.3s, transform 0.3s;
 }
-.btn_follow:hover {
-  border-color: #646cff;
-}
+
+.btn_follow:hover,
 .btn_follow:focus,
 .btn_follow:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
+  transform: scale(0.99) translateY(2px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
+  transform: translateY(2px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
 }
-.logo {
-  margin-left: 20px;
-  margin-top: 20pxgit add;
+.logo_svg {
+  width: 76px;
+  height: 22px;
+  text-align: left;
+  margin-left: -262px;
+  margin-top: 20px;
 }

@@ -1,7 +1,7 @@
 import css from "./Tweets.module.css";
 import PropTypes from "prop-types";
-import logo from "../../img/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Logo from "../Logo/Logo";
 
 export const Tweets = ({ users, onFollowButtonClick }) => {
   const handleFollowClick = (id) => {
@@ -13,15 +13,15 @@ export const Tweets = ({ users, onFollowButtonClick }) => {
       <ul className={css.list}>
         {users.map((user) => (
           <li key={user.id} className={css.card}>
-            <Link to={"https:/>/goit.global/ua/"}>
-              <img src={logo} alt="logo" className={css.logo} />
-            </Link>
+            <NavLink to={"https://m.goit.global/ua/new/"}>
+              <Logo className={css.logo_svg} />
+            </NavLink>
+            <div className={css.card_bg}></div>
             <div className={css.img_wrapper}>
               <img src={user.avatar} alt={user.user} className={css.avatar} />
             </div>
-
-            {/* <h1>{user.user}</h1> */}
-            <p>{user.tweets} tweets</p>
+            <div className={css.line}></div>
+            <p className={css.tweets_count}>{user.tweets} tweets</p>
             <p>{user.followers} followers</p>
             <button
               className={css.btn_follow}

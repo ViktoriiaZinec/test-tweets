@@ -1,0 +1,25 @@
+.button_load_more {
+  width: 220px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: #ebd8ff;
+  color: #373737;
+  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px
+    rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-top: 6px;
+  transition: transform 0.3s ease;
+}
+
+.button_load_more:hover,
+.button_load_more:focus,
+.button_load_more:focus-visible {
+  transform: scale(0.99) translateY(2px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
+}
