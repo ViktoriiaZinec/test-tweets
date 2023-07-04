@@ -14,7 +14,40 @@
 .navbar {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 40px;
   min-height: 40px;
-  padding: 10px 35px 10px 80px;
+  padding: 10px 100px 10px 100px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  color: #471ca9;
+  position: relative;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #5721d4;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: visibility 0s, transform 0.3s ease-in-out;
+}
+a:hover:before,
+a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.active {
+  scale: 1.1;
+  color: #7441e1;
 }

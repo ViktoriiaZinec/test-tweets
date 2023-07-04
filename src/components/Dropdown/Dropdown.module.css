@@ -1,7 +1,11 @@
 .dropdown_container {
+  position: fixed;
+  top: -60px;
+  z-index: 11;
+  right: 80px;
+  left: auto;
+  width: 200px;
   margin-top: 70px;
   text-align: left;
-  border: 1px solid #9e0d0d;
-  position: relative;
   border-radius: 5px;
 }

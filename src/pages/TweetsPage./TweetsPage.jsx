@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { getUsers, putFollower } from "../../services/usersAPI";
 import { Tweets } from "../../components/tweets/Tweets";
-import { BtnLoadMore } from "../../components/BtnLoadMore/BtnLoadMore";
 import { Loader } from "../../components/Loader/Loader";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import { filterUser } from "../../components/FilterUser/FilterUser";
+import css from "./TweetsPage.module.css";
+import { BtnLoadMore } from "../../components/BtnLoadMore/BtnLoadMore";
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const userPerRow = 3;
+  const [next, setNext] = useState(userPerRow);
 
   const [selectedOption, setSelectedOption] = useState(false);
 
@@ -57,28 +60,31 @@ const TweetsPage = () => {
     setFollowerCounts(updatedUsers.map((user) => user.followers));
     putFollower(updatedUser);
   };
+  const handleMoreTweets = () => {
+    setNext(next + userPerRow);
+  };
 
-  const renderLoadMoreButton = users.length % 3 === 0;
+  // const renderLoadMoreButton = users.length % 3 === 0;
 
-  function onLoadMore() {
-    setPage((prevPage) => prevPage + 1);
-  }
-
+  // function onLoadMore() {
+  //   setPage((prevPage) => prevPage + 1);
+  // }
+  const slicedUsers = filteredUsers?.slice(0, next);
   return (
-    <>
+    <div className={css.container}>
       <Dropdown
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
       />
       <Tweets
-        users={filteredUsers}
+        users={slicedUsers}
         followers={followerCounts}
         onFollowButtonClick={handleFollowButtonClick}
       />
       {error && <p> It seems, something went wrong</p>}
-      {renderLoadMoreButton && <BtnLoadMore onLoadMore={onLoadMore} />}
+      {<BtnLoadMore onLoadMore={handleMoreTweets} />}
       {isLoading && <Loader />}
-    </>
+    </div>
   );
 };
 export default TweetsPage;

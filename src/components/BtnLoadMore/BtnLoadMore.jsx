@@ -5,6 +5,7 @@ export function BtnLoadMore({ onLoadMore }) {
   function handleClick() {
     onLoadMore();
   }
+
   return (
     <button
       type="button"

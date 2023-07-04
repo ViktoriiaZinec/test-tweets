@@ -6,8 +6,18 @@ export const Layout = () => {
       <header>
         <nav className={css.nav}>
           <div className={css.navbar}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/tweets">Tweets</NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? css.active : undefined)}
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? css.active : undefined)}
+              to="/tweets"
+            >
+              Tweets
+            </NavLink>
           </div>
         </nav>
       </header>

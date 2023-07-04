@@ -16,6 +16,15 @@ function Dropdown({ selectedOption, setSelectedOption }) {
         defaultValue={selectedOption}
         onChange={handleChange}
         options={options}
+        className={css.dropdown}
+        theme={(theme) => ({
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary25: "#9b74e4",
+            primary: "#a06dfd",
+          },
+        })}
       />
     </div>
   );
