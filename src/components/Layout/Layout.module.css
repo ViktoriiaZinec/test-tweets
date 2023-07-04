@@ -18,6 +18,7 @@
   gap: 40px;
   min-height: 40px;
   padding: 10px 100px 10px 100px;
+  margin-left: 30px;
   text-decoration: none;
 }
 a {
@@ -26,10 +27,11 @@ a {
   font-size: 20px;
   font-weight: 600;
   color: #471ca9;
+  text-shadow: 2px 2px 4px rgba(71, 28, 169, 0.5);
   position: relative;
   transition: color 0.3s, border-bottom 0.3s;
 }
-a:before {
+.navbar > a:before {
   content: "";
   position: absolute;
   left: 0;
@@ -41,8 +43,8 @@ a:before {
   transform: scaleX(0);
   transition: visibility 0s, transform 0.3s ease-in-out;
 }
-a:hover:before,
-a:focus:before {
+.navbar > a:hover:before,
+.navbar > a:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }

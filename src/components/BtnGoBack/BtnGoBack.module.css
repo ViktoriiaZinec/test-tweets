@@ -1,0 +1,22 @@
+.link_back {
+  z-index: 12;
+  top: 20px;
+  left: 66px;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  position: fixed;
+}
+.icon_back {
+  width: 24px;
+  height: 24px;
+  fill: #7441e1;
+}
+.link_back:hover,
+.link_back:focus {
+  scale: 1.2;
+  border: none;
+}
+.a:before {
+  border: none;
+}
