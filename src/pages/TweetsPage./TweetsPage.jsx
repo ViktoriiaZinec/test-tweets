@@ -3,6 +3,7 @@ import { getUsers, putFollower } from "../../services/usersAPI";
 import { Tweets } from "../../components/tweets/Tweets";
 import { BtnLoadMore } from "../../components/BtnLoadMore/BtnLoadMore";
 import { Loader } from "../../components/Loader/Loader";
+import Dropdown from "../../components/Dropdown/Dropdown";
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
@@ -61,6 +62,7 @@ const TweetsPage = () => {
 
   return (
     <>
+      <Dropdown />
       <Tweets
         users={users}
         followers={followerCounts}

@@ -1,5 +1,7 @@
 .nav {
   background-color: #fff;
+  margin-left: 0;
+  margin-right: 0;
   box-shadow: 0 5px 20px -10px #000;
   overflow: hidden;
   position: fixed;
@@ -14,5 +16,5 @@
   display: flex;
   justify-content: space-between;
   min-height: 40px;
-  padding: 10px 15px 10px 50px;
+  padding: 10px 35px 10px 80px;
 }

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import TweetsPage from "./pages/TweetsPage./TweetsPage";
 import { Layout } from "./components/Layout/Layout";
@@ -10,6 +10,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="tweets" element={<TweetsPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
   );
