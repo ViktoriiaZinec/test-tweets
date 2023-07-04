@@ -4,6 +4,7 @@ import { Tweets } from "../../components/tweets/Tweets";
 import { BtnLoadMore } from "../../components/BtnLoadMore/BtnLoadMore";
 import { Loader } from "../../components/Loader/Loader";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import { filterUser } from "../../components/FilterUser/FilterUser";
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
@@ -11,6 +12,10 @@ const TweetsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  const [selectedOption, setSelectedOption] = useState(false);
+
+  let filteredUsers = filterUser(users, selectedOption);
+  console.log("filteredUsers :>> ", filteredUsers);
   const [followerCounts, setFollowerCounts] = useState(
     users.map((user) => user.followers)
   );
@@ -50,7 +55,6 @@ const TweetsPage = () => {
     setUsers(updatedUsers);
     const updatedUser = updatedUsers.find((user) => user.id === userId);
     setFollowerCounts(updatedUsers.map((user) => user.followers));
-
     putFollower(updatedUser);
   };
 
@@ -62,9 +66,12 @@ const TweetsPage = () => {
 
   return (
     <>
-      <Dropdown />
+      <Dropdown
+        selectedOption={selectedOption}
+        setSelectedOption={setSelectedOption}
+      />
       <Tweets
-        users={users}
+        users={filteredUsers}
         followers={followerCounts}
         onFollowButtonClick={handleFollowButtonClick}
       />

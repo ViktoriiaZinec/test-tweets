@@ -1,23 +1,28 @@
-import { useState } from "react";
+import Select from "react-select";
+import css from "./Dropdown.module.css";
+import PropTypes from "prop-types";
+import { filterValues } from "../FilterUser/filterValues";
+// import { filterValues } from "../filterUser/filterValues";
 
-function Dropdown() {
-  const [selectedOption, setSelectedOption] = useState("");
+const options = [filterValues.all, filterValues.follow, filterValues.following];
 
-  const handleOptionChange = (e) => {
-    setSelectedOption(e.target.value);
+function Dropdown({ selectedOption, setSelectedOption }) {
+  const handleChange = (e) => {
+    setSelectedOption(e.value);
   };
-
   return (
-    <div>
-      <h3>Select an option:</h3>
-      <select value={selectedOption} onChange={handleOptionChange}>
-        <option value="All">All</option>
-        <option value="Following">Following</option>
-        <option value="Follow">Follow</option>
-      </select>
-      <p>Selected option: {selectedOption}</p>
+    <div className={css.dropdown_container}>
+      <Select
+        defaultValue={selectedOption}
+        onChange={handleChange}
+        options={options}
+      />
     </div>
   );
 }
-
 export default Dropdown;
+
+Dropdown.propTypes = {
+  selectedOption: PropTypes.object,
+  setSelectedOption: PropTypes.func,
+};

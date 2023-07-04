@@ -12,7 +12,6 @@ export const getUsers = async (index) => {
   const response = await API.get("users", {
     params: { page: index },
   });
-  console.log("response :>> ", response);
   return response;
 };
 export const putFollower = async (user) => {
