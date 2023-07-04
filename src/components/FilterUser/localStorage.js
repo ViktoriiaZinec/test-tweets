@@ -11,4 +11,5 @@ const LocalStorage = () => {
   }, [followings]);
   return [followings, setFollowings];
 };
+
 export default LocalStorage;

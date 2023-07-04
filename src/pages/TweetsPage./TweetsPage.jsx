@@ -14,7 +14,6 @@ const TweetsPage = () => {
   const [error, setError] = useState(false);
   const userPerRow = 3;
   const [next, setNext] = useState(userPerRow);
-
   const [selectedOption, setSelectedOption] = useState(false);
 
   let filteredUsers = filterUser(users, selectedOption);
@@ -22,7 +21,7 @@ const TweetsPage = () => {
   const [followerCounts, setFollowerCounts] = useState(
     users.map((user) => user.followers)
   );
-
+  console.log("users.length :>> ", users.length);
   useEffect(() => {
     setIsLoading(true);
 

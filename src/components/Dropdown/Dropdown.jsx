@@ -2,7 +2,6 @@ import Select from "react-select";
 import css from "./Dropdown.module.css";
 import PropTypes from "prop-types";
 import { filterValues } from "../FilterUser/filterValues";
-// import { filterValues } from "../filterUser/filterValues";
 
 const options = [filterValues.all, filterValues.follow, filterValues.following];
 
@@ -32,6 +31,6 @@ function Dropdown({ selectedOption, setSelectedOption }) {
 export default Dropdown;
 
 Dropdown.propTypes = {
-  selectedOption: PropTypes.object,
+  selectedOption: PropTypes.any,
   setSelectedOption: PropTypes.func,
 };
