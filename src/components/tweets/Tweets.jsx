@@ -13,7 +13,11 @@ export const Tweets = ({ users, onFollowButtonClick }) => {
       <ul className={css.list}>
         {users?.map((user) => (
           <li key={user.id} className={css.card}>
-            <NavLink to={"https://m.goit.global/ua/new/"} target="_blank">
+            <NavLink
+              className={css.logo_link}
+              to={"https://m.goit.global/ua/new/"}
+              target="_blank"
+            >
               <Logo className={css.logo_svg} />
             </NavLink>
             <div className={css.card_bg}></div>
