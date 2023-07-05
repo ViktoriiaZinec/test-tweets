@@ -73,11 +73,15 @@ const TweetsPage = () => {
         setSelectedOption={setSelectedOption}
       />
 
-      <Tweets
-        users={slicedUsers}
-        followers={followerCounts}
-        onFollowButtonClick={handleFollowButtonClick}
-      />
+      {slicedUsers.length === 0 ? (
+        <p className={css.sorry}>Sorry, there are no users for your request</p>
+      ) : (
+        <Tweets
+          users={slicedUsers}
+          followers={followerCounts}
+          onFollowButtonClick={handleFollowButtonClick}
+        />
+      )}
 
       {error && <p> It seems, something went wrong</p>}
       {slicedUsers.length < filteredUsers.length && (

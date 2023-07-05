@@ -9,8 +9,7 @@
   font-family: inherit;
   background-color: #ebd8ff;
   color: #373737;
-  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px
-    rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.35);
   cursor: pointer;
   transition: border-color 0.25s;
   margin-top: 6px;
