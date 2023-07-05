@@ -16,10 +16,13 @@
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(71, 28, 169, 0.5);
   position: relative;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: 0.2s;
 }
 
 .link:hover,
 .link:focus {
-  scale: 1.06;
+  scale: 1.02;
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }

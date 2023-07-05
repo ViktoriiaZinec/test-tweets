@@ -74,7 +74,7 @@ const TweetsPage = () => {
       />
 
       {slicedUsers.length === 0 ? (
-        <p className={css.sorry}>Sorry, there are no users for your request</p>
+        <p className={css.sorry}>Sorry, there are no users for your request </p>
       ) : (
         <Tweets
           users={slicedUsers}
