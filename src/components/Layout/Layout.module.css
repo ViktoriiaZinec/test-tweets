@@ -51,5 +51,8 @@ a {
 
 .active {
   scale: 1.1;
+  -webkit-transform: scale(1.1); /* For Chrome */
+  -ms-transform: scale(1.1); /* For IE */
+  transform: scale(1.1);
   color: #7441e1;
 }
