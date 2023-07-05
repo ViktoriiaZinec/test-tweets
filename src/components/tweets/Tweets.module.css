@@ -101,12 +101,11 @@
   transform: translateY(2px);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
 }
-
 .logo_svg {
   width: 76px;
   height: 22px;
   text-align: left;
-  margin-left: -164px;
+  margin-left: -264px;
   margin-top: 20px;
 }
 .logo_svg:hover {

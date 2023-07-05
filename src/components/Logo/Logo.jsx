@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 const Logo = ({ className }) => {
   return (
-    <svg id="logo" viewBox="0 0 111 32" className={className}>
+    <svg id="logoSVG" viewBox="0 0 111 32" className={className}>
       <path
         fill="#fff"
         opacity="0.3"
