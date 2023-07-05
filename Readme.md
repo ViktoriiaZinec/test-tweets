@@ -10,7 +10,8 @@ Tweets implemented by scratch on vue.js. It contains 2 pages - Home and Tweets. 
 ## About the project.
 
 - This app is implemented in React.js and my personal backend for development was created using the UI service mockapi.io.
-- Libraries l
+- Libraries like Vue.draggable were not used as i had to write most of the drag and drop logic according to the solitaire game type and I also had to **MOVE** the stack of cards.
+- Ghost image in drag is removed instead the **whole stack** of card moves with cursor change.
 
 ### CSS
 
