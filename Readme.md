@@ -10,12 +10,13 @@ Tweets implemented by scratch on vue.js. It contains 2 pages - Home and Tweets. 
 ## About the project.
 
 - This app is implemented in React.js and my personal backend for development was created using the UI service mockapi.io.
-- Libraries like Vue.draggable were not used as i had to write most of the drag and drop logic according to the solitaire game type and I also had to **MOVE** the stack of cards.
-- Ghost image in drag is removed instead the **whole stack** of card moves with cursor change.
+- The project utilizes the following libraries: axios for making HTTP requests, react-select for a customizable dropdown/select component, and react-loader-spinner to display loading spinners while waiting for asynchronous operations to complete.
+- The routing is implemented using React Router, which indeed provides powerful navigation features such as links and the ability to navigate between routes programmatically.
+- The "Go back" button is created using the useLocation hook provided by React Router. The useLocation hook allows to access the current location object, which contains information about the current URL.
 
 ### CSS
 
-- Each and every card is 100% css except the SVG of the suit in the center of the card,which is made by illustrator tool.
+- All styles are implemented using CSS Modules, which allows applying styles to specific elements within the component without worrying about global naming conflicts.
 
 ## Project setup
 
