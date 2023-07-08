@@ -34,8 +34,14 @@
   margin-top: -20px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
-.line {
+
+.card_bg::after {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 166px;
   width: 380px;
   height: 8px;
   background: #ebd8ff;
@@ -44,6 +50,7 @@
     0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
   margin-top: 18px;
 }
+
 .img_wrapper {
   position: absolute;
   width: 80px;
@@ -56,12 +63,12 @@
   width: 80px;
   height: 80px;
   background: #ebd8ff;
-  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-    inset 0px -2.195px 4.39163px #9762cf, inset 0px 4.39163px 3.29372px #fbf8ff,
+  box-shadow: 0px 4.4px 4.4px rgba(0, 0, 0, 0.06),
+    inset 0px -2.2px 4.4px #9762cf, inset 0px 4.4px 3.4px #fbf8ff,
     0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 .tweets_count {
-  margin-top: 62px;
+  margin-top: 88px;
   margin-bottom: -2px;
 }
 .avatar {

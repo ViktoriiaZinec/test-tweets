@@ -24,7 +24,6 @@ export const Tweets = ({ users, onFollowButtonClick }) => {
             <div className={css.img_wrapper}>
               <img src={user.avatar} alt={user.user} className={css.avatar} />
             </div>
-            <div className={css.line}></div>
             <p className={css.tweets_count}>{user.tweets} tweets</p>
             <p>
               {user.followers.toLocaleString("en-US", { style: "decimal" })}{" "}
